@@ -1,0 +1,38 @@
+{
+  "name": "gatsby-plugin-html2amp",
+  "version": "0.1.0",
+  "description": "Gatsby plugin to generate AMP(Accelerated Mobile Pages) from HTMl",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint *.js",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomoyukikashiro/gatsby-plugin-html2amp.git"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "amp"
+  ],
+  "author": "Tomoyuki Kashiro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomoyukikashiro/gatsby-plugin-html2amp/issues"
+  },
+  "homepage": "https://github.com/tomoyukikashiro/gatsby-plugin-html2amp#readme",
+  "dependencies": {
+    "fs-extra": "^7.0.1",
+    "globby": "^8.0.1",
+    "html2amp": "^0.1.0"
+  },
+  "devDependencies": {
+    "eslint": "5.9.0",
+    "eslint-config-standard": "12.0.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-node": "8.0.0",
+    "eslint-plugin-promise": "4.0.1",
+    "eslint-plugin-standard": "4.0.0"
+  }
+}
