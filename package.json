@@ -25,7 +25,7 @@
   "dependencies": {
     "fs-extra": "^7.0.1",
     "globby": "^8.0.1",
-    "html2amp": "^0.1.0"
+    "html2amp": "^0.2.0"
   },
   "devDependencies": {
     "eslint": "5.9.0",
