@@ -39,3 +39,9 @@ In gatsby-config.js
 - dist
   - Path to output
   - If the options is not set files are override by AMP result
+
+## More Detail
+
+Please check my article out for detail. ⚡
+
+https://blog.tomoyukikashiro.me/post/amp-using-gatsby
