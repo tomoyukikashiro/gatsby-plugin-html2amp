@@ -8,12 +8,13 @@ exports.onPostBuild = (_, pluginOptions) => {
     files: ['**/*.html'],
     publicPath: 'public',
     gaConfigPath: null,
-    dist: null
+    dist: null,
+    serviceWorker: null
   }
-  const { files, publicPath, gaConfigPath, dist } = { ...defaultOptions, ...pluginOptions }
+  const { files, publicPath, gaConfigPath, dist, serviceWorker } = { ...defaultOptions, ...pluginOptions }
   const absolutePaths = files.map(file => path.join(process.cwd(), publicPath, file))
   const htmls = globby.sync(absolutePaths)
-  const config = { gaConfigPath, cwd: path.join(process.cwd(), publicPath) }
+  const config = { gaConfigPath, cwd: path.join(process.cwd(), publicPath), serviceWorker }
   const promises = htmls.map(async html => {
     const buffer = fs.readFileSync(html)
     const amp = await html2amp(buffer.toString(), config)
