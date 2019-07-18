@@ -1,4 +1,5 @@
 const path = require("path");
+const slash = require('slash')
 const fs = require("fs-extra");
 const globby = require("globby");
 const html2amp = require("html2amp");
