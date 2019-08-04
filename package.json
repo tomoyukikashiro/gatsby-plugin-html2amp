@@ -26,9 +26,9 @@
   },
   "homepage": "https://github.com/tomoyukikashiro/gatsby-plugin-html2amp#readme",
   "dependencies": {
-    "fs-extra": "^8.0.0",
+    "fs-extra": "^8.1.0",
     "globby": "^10.0.0",
-    "html2amp": "^1.0.0"
+    "html2amp": "^1.0.3"
   },
   "devDependencies": {
     "eslint-config-standard": "13.0.1",
