@@ -27,7 +27,7 @@
   "homepage": "https://github.com/tomoyukikashiro/gatsby-plugin-html2amp#readme",
   "dependencies": {
     "fs-extra": "^8.0.0",
-    "globby": "^9.0.0",
+    "globby": "^10.0.0",
     "html2amp": "^1.0.0"
   },
   "devDependencies": {
