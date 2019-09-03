@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint *.js",
+    "lint:fix": "eslint *.js --fix",
     "test": "npm run lint"
   },
   "engines": {
