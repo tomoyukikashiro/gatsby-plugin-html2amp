@@ -17,25 +17,20 @@ exports.onPostBuild = (_, pluginOptions) => {
     ...pluginOptions
   }
   const absolutePaths = files.map(file =>
-    path.join(process.cwd(), publicPath, file)
+    slash(path.join(process.cwd(), publicPath, file))
   )
   const htmls = globby.sync(absolutePaths)
   const config = {
     gaConfigPath,
-    cwd: path.join(process.cwd(), publicPath),
+    cwd: slash(path.join(process.cwd(), publicPath)),
     serviceWorker
   }
   const promises = htmls.map(async html => {
     const buffer = fs.readFileSync(html)
-    const winPlatform = process.platform === 'win32' // check win32 platform
     const amp = await html2amp(buffer.toString(), config)
     if (dist) {
-      const basePath = winPlatform
-        ? slash(path.join(process.cwd(), publicPath)) // if win32 replace slash
-        : path.join(process.cwd(), publicPath)
-      const ampPath = winPlatform
-        ? slash(path.join(process.cwd(), dist)) // if win32 replace slash
-        : path.join(process.cwd(), dist)
+      const basePath = slash(path.join(process.cwd(), publicPath))
+      const ampPath = slash(path.join(process.cwd(), dist))
       const newFilePath = html.replace(basePath, ampPath)
       fs.outputFileSync(newFilePath, amp)
     } else {
