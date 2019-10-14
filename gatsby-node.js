@@ -10,9 +10,10 @@ exports.onPostBuild = (_, pluginOptions) => {
     publicPath: 'public',
     gaConfigPath: null,
     dist: null,
-    serviceWorker: null
+    serviceWorker: null,
+    optimize: false
   }
-  const { files, publicPath, gaConfigPath, dist, serviceWorker } = {
+  const { files, publicPath, gaConfigPath, dist, serviceWorker, optimize } = {
     ...defaultOptions,
     ...pluginOptions
   }
@@ -23,7 +24,8 @@ exports.onPostBuild = (_, pluginOptions) => {
   const config = {
     gaConfigPath,
     cwd: slash(path.join(process.cwd(), publicPath)),
-    serviceWorker
+    serviceWorker,
+    optimize
   }
   const promises = htmls.map(async html => {
     const buffer = fs.readFileSync(html)
