@@ -19,7 +19,8 @@ In gatsby-config.js
     files: ['post/**/index.html', 'index.html'],
     publicPath: 'public',
     gaConfigPath: 'gaConfig.json',
-    dist: 'public/dist'
+    dist: 'public/dist',
+    optimize: true
   }
 }
 ```
@@ -39,6 +40,8 @@ In gatsby-config.js
 - dist
   - Path to output
   - If the options is not set files are override by AMP result
+- optimize
+  - If true, this module will optimize the html by using [@ampproject/toolbox-optimizer](https://github.com/ampproject/amp-toolbox/tree/master/packages/optimizer) 
 
 ## More Detail
 
