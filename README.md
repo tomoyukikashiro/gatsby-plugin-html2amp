@@ -20,7 +20,9 @@ In gatsby-config.js
     publicPath: 'public',
     gaConfigPath: 'gaConfig.json',
     dist: 'public/dist',
-    optimize: true
+    optimize: true,
+    htmlPlugins: [],
+    cssPlugins: []
   }
 }
 ```
@@ -42,6 +44,11 @@ In gatsby-config.js
   - If the options is not set files are override by AMP result
 - optimize
   - If true, this module will optimize the html by using [@ampproject/toolbox-optimizer](https://github.com/ampproject/amp-toolbox/tree/master/packages/optimizer) 
+- htmlPlugins
+  - you can add custom converter for html
+- cssPlugins
+  - you can add custom converter for css
+
 
 ## More Detail
 
