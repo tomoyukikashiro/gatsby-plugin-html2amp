@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-html2amp",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Gatsby plugin to generate AMP(Accelerated Mobile Pages) from HTMl",
   "main": "index.js",
   "scripts": {
