@@ -29,7 +29,7 @@
   "dependencies": {
     "fs-extra": "^9.0.0",
     "globby": "^11.0.0",
-    "html2amp": "^1.4.0",
+    "html2amp": "^1.4.1",
     "slash": "^3.0.0"
   },
   "devDependencies": {
