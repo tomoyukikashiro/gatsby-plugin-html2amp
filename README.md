@@ -18,6 +18,7 @@ In gatsby-config.js
   options: {
     files: ['post/**/index.html', 'index.html'],
     publicPath: 'public',
+    vendor: 'gtag',
     gaConfigPath: 'gaConfig.json',
     dist: 'public/dist',
     optimize: true,
@@ -39,11 +40,14 @@ In gatsby-config.js
   - amp-analytics config json for [google analytics](https://www.ampproject.org/docs/analytics/analytics-vendors)
   - The path is from `publicPath`
   - Optional
+- vendor
+  - add your vendor, (https://www.ampproject.org/docs/analytics/analytics-vendors)
+  - defaults to 'googleanalytics'
 - dist
   - Path to output
   - If the options is not set files are override by AMP result
 - optimize
-  - If true, this module will optimize the html by using [@ampproject/toolbox-optimizer](https://github.com/ampproject/amp-toolbox/tree/master/packages/optimizer) 
+  - If true, this module will optimize the html by using [@ampproject/toolbox-optimizer](https://github.com/ampproject/amp-toolbox/tree/master/packages/optimizer)
 - htmlPlugins
   - you can add custom converter for html
 - cssPlugins
