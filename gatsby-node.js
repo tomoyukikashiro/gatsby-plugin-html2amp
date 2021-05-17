@@ -9,13 +9,14 @@ exports.onPostBuild = (_, pluginOptions) => {
     files: ['**/*.html'],
     publicPath: 'public',
     gaConfigPath: null,
+    vendor: 'googleanalytics',
     dist: null,
     serviceWorker: null,
     optimize: false,
     htmlPlugins: [],
     cssPlugins: []
   }
-  const { files, publicPath, gaConfigPath, dist, serviceWorker, optimize, htmlPlugins, cssPlugins } = {
+  const { files, publicPath, gaConfigPath, vendor, dist, serviceWorker, optimize, htmlPlugins, cssPlugins } = {
     ...defaultOptions,
     ...pluginOptions
   }
@@ -25,6 +26,7 @@ exports.onPostBuild = (_, pluginOptions) => {
   const htmls = globby.sync(absolutePaths)
   const config = {
     gaConfigPath,
+    vendor,
     cwd: slash(path.join(process.cwd(), publicPath)),
     serviceWorker,
     optimize,
